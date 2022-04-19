@@ -1,14 +1,10 @@
-from collections import defaultdict
 import bisect
-from sys import stdin; input = stdin.readline
 
 N = int(input())
 A_li = [int(i)-1 for i in input().split()]
 Q = int(input())
+d = [[] for _ in range(N+1)]
 
-dp = [[0]*(N+1) for _ in range(N)]
-
-d = defaultdict(list)
 for i in range(N):
     d[A_li[i]].append(i)
 
